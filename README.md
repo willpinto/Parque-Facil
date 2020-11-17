@@ -1,2 +1,2 @@
-# Parque-Facil
+# Parquea-Facil
 Este es el repositorio del proyecto formativo en HTML
