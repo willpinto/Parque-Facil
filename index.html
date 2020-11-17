@@ -16,8 +16,8 @@
         <div class="row pt-4 pb-5">
             <div class="col"></div>
             <div class="col-1">
-                <a href="" class="btn btn-primary py-3 px-4" data-toggle="tooltip" data-placement="left"
-                    title="Login"><span class="icon-login"></span></a>
+                <button id="login" class="btn btn-primary py-3 px-4" data-toggle="tooltip" data-placement="left"
+                    title="Login"><span class="icon-login"></span></button>
             </div>
         </div>
         <div class="row">
@@ -60,11 +60,11 @@
                 </div>
             </div>
             <div class="col-3">
-                <img id="logo-sena" src="img/logos/senalogo.png" alt="sena logo">
+                <img class="logo-sena-large" src="img/logos/senalogo.png" alt="sena logo">
             </div>
         </div>
     </div>
-    <div class="modal right fade" id="FormularioVehiculo" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    <div class="modal right fade" id="login-modal" data-backdrop="static" data-keyboard="false" tabindex="-1"
         role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -74,30 +74,28 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="row">
-                        <div class="col">
-                            <div class="form-group my-3">
-                                <label>Usuario</label>
-                                <input class="form-control" id="user" type="text"
-                                    oninvalid="this.setCustomValidity('Usuario o contraseña invalidos')"
-                                    oninput="this.setCustomValidity('')" required>
-                            </div>
-                            <div class="form-group my-3">
-                                <label>Contraseña</label>
-                                <input class="form-control" id="pass" type="text" required>
+                    <div class="mx-5 px-5">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group my-3">
+                                    <label>Usuario</label>
+                                    <input class="form-control" id="user" type="text"
+                                        oninvalid="this.setCustomValidity('Usuario o contraseña invalidos')"
+                                        oninput="this.setCustomValidity('')" required>
+                                </div>
+                                <div class="form-group my-3">
+                                    <label>Contraseña</label>
+                                    <input class="form-control" id="pass" type="password" required>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <div class="row">
-                            <div class="col">
-                                <a href="#" id="ConfirmarIngresar" class="btn btn-success">Ingresar</a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <a href="#">Olvidaste tú contraseña</a>
-                            </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col">
+                            <a href="#" class="px-3">Olvidaste tú contraseña</a>
+                            <a href="#" id="ConfirmarIngresar" class="btn btn-success">Ingresar</a>
                         </div>
                     </div>
                 </div>
