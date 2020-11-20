@@ -4,4 +4,8 @@ $(document).ready(function() {
     $('#login').click(function() {
         $('#login-modal').modal('show');
     });
+
+    $('#registrar-propietario').click(function() {
+        $('#tc-modal').modal('show');
+    });
 });

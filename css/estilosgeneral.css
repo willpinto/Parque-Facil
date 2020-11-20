@@ -43,3 +43,8 @@ body {
     height: 150px;
     width: auto;
 }
+
+.no-resize-textarea:read-only {
+    background-color: white;
+    resize: none;
+}
