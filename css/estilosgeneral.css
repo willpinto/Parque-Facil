@@ -33,6 +33,11 @@ body {
     width: auto;
 }
 
+.log-sena-medium{
+    height: 170px;
+    width: auto;
+}
+
 .cam {
     background-color: black;
     height: 150px;
