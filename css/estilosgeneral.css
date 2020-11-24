@@ -28,6 +28,7 @@ body {
     width: auto;
 }
 
+
 input[type="checkbox"][id^="myCheckbox"] {
     display: none;
   }
