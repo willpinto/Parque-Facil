@@ -1,0 +1,19 @@
+body {
+    background-image: url("../img/fondos/wave2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pages {
+    visibility: hidden;
+    display: none;
+}
+
+.activo {
+    visibility: visible;
+    display: block;
+}
+
+li > a {
+    cursor: pointer;
+}

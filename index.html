@@ -53,7 +53,7 @@
                                 <input class="form-control" id="placa" type="text" required>
                             </div>
                             <div class="col pt-4">
-                                <a href="#" class="btn btn-orange px-4">Consultar</a>
+                                <a href="vista/propietario/propietarioinfo.html" class="btn btn-orange px-4">Consultar</a>
                             </div>
                         </div>
                     </div>
@@ -64,8 +64,7 @@
             </div>
         </div>
     </div>
-    <div class="modal right fade" id="login-modal" data-backdrop="static" data-keyboard="false" tabindex="-1"
-        role="dialog">
+    <div class="modal fade" id="login-modal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -95,7 +94,30 @@
                     <div class="row">
                         <div class="col">
                             <a href="#" class="px-3">Olvidaste tú contraseña</a>
-                            <a href="#" id="ConfirmarIngresar" class="btn btn-success">Ingresar</a>
+                            <button id="ConfirmarIngresar" class="btn btn-success">Ingresar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="temp-modal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h2>Redireccionamiento temporal</h2>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col">
+                            <a href="vista/administrador/administradorindex.html"
+                                class="btn btn-success">Administrador</a>
+                            <a href="vista/vigilante/vigilanteindex.html" class="btn btn-success">Vigilante</a>
                         </div>
                     </div>
                 </div>
