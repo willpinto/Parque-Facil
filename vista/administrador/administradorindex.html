@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+    <title>Sidebar template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/sidenav.css">
+    <link rel="stylesheet" type="text/css" href="../../css/estilosadministrador.css">
+</head>
+
+<body>
+    <div class="page-wrapper chiller-theme toggled">
+        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+            <i class="fas fa-bars"></i>
+        </a>
+        <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+                <div class="sidebar-brand">
+                    <a href="#">Parquea Fácil SENA</a>
+                    <div id="close-sidebar">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="sidebar-header">
+                    <div class="user-pic">
+                        <img class="img-responsive img-rounded"
+                            src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+                            alt="User picture">
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">Esteban
+                            <strong>Ramirez</strong>
+                        </span>
+                        <span class="user-role">Administrator</span>
+                        <span class="user-status">
+                            <i class="fa fa-circle"></i>
+                            <span>Online</span>
+                        </span>
+                    </div>
+                </div>
+                <!-- sidebar-header  -->
+                <div class="sidebar-search">
+                    
+                </div>
+                <!-- sidebar-search  -->
+                <div class="sidebar-menu">
+                    <ul>
+                        <li class="header-menu">
+                            <span>General</span>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-tachometer-alt"></i>
+                                <span>Administrar</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a id="activar-administrador">Administrador</a>
+                                    </li>
+                                    <li>
+                                        <a id="activar-vigilante">Vigilante</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header-menu">
+                            <span>Extra</span>
+                        </li>
+                        <li>
+                            <a id="activar-consultar">
+                                <i class="fa fa-search"></i>
+                                <span>Consultar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="activar-reportes">
+                                <i class="fa fa-book"></i>
+                                <span>Reportes</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- sidebar-menu  -->
+            </div>
+            <!-- sidebar-content  -->
+            <div class="sidebar-footer">
+                <a href="#">
+                    <i class="fa fa-bell"></i>
+                    <span class="badge badge-pill badge-warning notification">3</span>
+                </a>
+                <a href="#">
+                    <i class="fa fa-envelope"></i>
+                    <span class="badge badge-pill badge-success notification">7</span>
+                </a>
+                <a href="#">
+                    <i class="fa fa-cog"></i>
+                    <span class="badge-sonar"></span>
+                </a>
+                <a href="../../index.html">
+                    <i class="fa fa-power-off"></i>
+                </a>
+            </div>
+        </nav>
+        <!-- sidebar-wrapper  -->
+        <main class="page-content">
+            <div class="container-fluid">
+                <div class="container px-5">
+                    <div class="pages" id="administrador">
+                        <div class="row">
+                            <div class="col">
+                                <h1 class="text-center">Administrador</h1>
+                            </div>
+                        </div>
+                        <div class="row pt-5">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group my-3">
+                                            <label>Cédula:</label>
+                                            <input class="form-control" id="cedula-adm" type="number" required>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group my-3">
+                                            <label>Nombres:</label>
+                                            <input class="form-control" id="nombres-adm" type="text" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group my-3">
+                                            <label>Cargo:</label>
+                                            <input class="form-control" id="cargo" type="text" required>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group my-3">
+                                            <label>Contraseña:</label>
+                                            <input class="form-control" id="pass-adm" type="password" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col"></div>
+                            <div class="col-3 d-flex flex-column">
+                                <button id="btnAdministrador" class="btn btn-primary">Ingresar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pages" id="vigilante">
+                        <div class="row">
+                            <div class="col">
+                                <h1 class="text-center">Vigilante</h1>
+                            </div>
+                        </div>
+                        <div class="row pt-5">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group my-3">
+                                            <label>Cédula:</label>
+                                            <input class="form-control" id="cedula-vig" type="number" required>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group my-3">
+                                            <label>Nombres:</label>
+                                            <input class="form-control" id="nombres-vig" type="text" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group my-3">
+                                            <label>Rol:</label>
+                                            <input class="form-control" id="rol" type="text" required>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group my-3">
+                                            <label>Turno:</label>
+                                            <input class="form-control" id="turno" type="text" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3"></div>
+                                    <div class="col">
+                                        <div class="form-group my-3">
+                                            <label>Contraseña:</label>
+                                            <input class="form-control" id="pass-vig" type="text" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-3"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col"></div>
+                            <div class="col-3 d-flex flex-column">
+                                <button id="btnVigilante" class="btn btn-primary">Ingresar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pages" id="consultar">
+                        <div class="row">
+                            <div class="col">
+                                <h1 class="text-center">Consultar Usuario</h1>
+                            </div>
+                        </div>
+                        <div class="row pt-5">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group my-3">
+                                            <label>Tipo:</label>
+                                            <select class="form-control" id="tipo">
+                                                <option value="administrador">Administrador</option>
+                                                <option value="vigilante">Vigilante</option>
+                                                <option value="Propietario">Propietario</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group my-3">
+                                            <label>Cédula:</label>
+                                            <input class="form-control" id="cedula-usu" type="number" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col"></div>
+                            <div class="col-3 d-flex flex-column">
+                                <button id="btnConsultar" class="btn btn-primary">Buscar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pages" id="reportes">
+                        <div class="row">
+                            <div class="col">
+                                <h1>Reportes</h1>
+                            </div>
+                        </div>
+                        <div class="row pt-5">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group my-3">
+                                            <label>Tipo:</label>
+                                            <select class="form-control" id="parametro">
+                                                <option value="administrador">Número de vehículos por tipo</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col"></div>
+                            <div class="col-3 d-flex flex-column">
+                                <button id="btnReportes" class="btn btn-primary">Generar</button>
+                            </div>
+                        </div>
+                        <div class="row pt-5">
+                            <div class="col">
+                                <table class="table">
+                                    <thead class="thead-primary">
+                                        <tr>
+                                            <th scope="col">Placa</th>
+                                            <th scope="col">Tipo</th>
+                                            <th scope="col">Marca</th>
+                                            <th scope="col">Línea</th>
+                                            <th scope="col">Modelo</th>
+                                            <th scope="col">Color</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">ABC-123</th>
+                                            <td>Carro</td>
+                                            <td>Suzuki</td>
+                                            <td>Aveo</td>
+                                            <td>2018</td>
+                                            <td>Blanco</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- page-content" -->
+    </div>
+    <!-- page-wrapper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="../../js/sidenav.js"></script>
+
+</body>
+
+</html>
