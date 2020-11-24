@@ -54,7 +54,7 @@ input[type="checkbox"][id^="myCheckbox"] {
     width: 40px;
     height: 25px;
     text-align: center;
-    line-height: 30px;
+    line-height: 25px;
     transition-duration: 0.4s;
     transform: scale(0);
   }
