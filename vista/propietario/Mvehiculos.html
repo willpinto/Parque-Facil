@@ -10,32 +10,74 @@
     <title>PARQUEAFACIL</title>
 </head>
 <body>
-    <aside>
-        <h1>BIENVENIDO</h1>
-        <h2>PARQUEAFACIL</h2>
-        <img src="../../img/logos/logo-sena.jpg">
-        </aside>
-    Mis Vehículos
-    <br>
-    <img src="../../img/logos/carro.png" width="200px" height="200px"><br>
-    <p>xxx</p>
-        <span class="border border-secondary">
-        Tipo: <input type="text" name="documento" id="" placeholder="xxx"><br>
-        Marca: <input type="text" name="marca" id="" placeholder="xxx"><br>
-        Modelo: <input type="text" name="modelo" id="" placeholder="xxx"><br>
-        Línea: <input type="text" name="linea" id="" placeholder="xxx"><br>
-    </span>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-right display-3 font-weight-bold text-primary">Bienvenido</h1>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col"></div>
+            <div class="col-3">
+                <h3 class="text-center text-white bg-primary">Parquea Fácil</h3>
+            </div>
+        </div>
+        <div class="row pt-4 mt-5">
+            <div class="col">
+                <div class="row">
+                    <div class="col-5">
+                        <p class="text-justify">Mis Vehículos</p>
+                    </div>
+                    <div class="col"></div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group row">
+                            <input type="checkbox" class="col-1 form-control" id="myCheckbox1">
+                            <label for="myCheckbox1"><img src="../../img/logos/carrose.png" /></label>
+                            <div class="col">
+                                 <textarea name=""  id="" cols="30" rows="5">
+                            Tipo: xxxxxx
+                            Marca:xxxxxx
+                            Modelo:xxxxxx
+                            Línea:xxxxxx 
+                                 </textarea>
+                        </div>
 
-    <img src="../../img/logos/bicicleta.png" width="200px" height="200px"><br>
-    <p>xxx</p> 
-   <br>
-    <span class="border border-secondary">
-        Tipo: <input type="text" name="documento" id="" placeholder="xxx"><br>
-        Marca: <input type="text" name="marca" id="" placeholder="xxx"><br>
-        Modelo: <input type="text" name="modelo" id="" placeholder="xxx"><br>
-        Línea: <input type="text" name="linea" id="" placeholder="xxx"><br>
-    </span>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+                        <div class="form-group row">
+                        <input type="checkbox" class="col-1 form-control" id="myCheckbox3">
+                        <label for="myCheckbox3"><img src="../../img/logos/bicicletase.png" /></label>
+                        <div class="col-2">
+                                <textarea name=""  id="" cols="30" rows="5">
+                            Tipo:xxxxxx
+                            Marca:xxxxxx
+                            Modelo:xxxxxx
+                            Línea:xxxxxx 
+                                </textarea>
+                    </div>
+                    <div class="col">
+                        <div class="form-row-4">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mt-5">
+                <div class="row">
+                    <div class="col">
+                        <img class="logo-sena-medium" src="../../img/logos/senalogo.png" alt="sena logo">
+                    </div>
+                </div>
+                <div class="row h-50">
+                    <div class="col d-flex flex-row-reverse">
+                        <button id="registrar-propietario" class="btn btn-orange mt-auto">Continuar</button>
+                    </div>
+                </div>
+            </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+<script src="../../js/scriptgeneral.js"></script>
 </body>
 </html>
