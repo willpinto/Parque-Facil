@@ -4,14 +4,9 @@ body {
     background-size: cover;
 }
 
-.pages {
+.ocultar {
     visibility: hidden;
     display: none;
-}
-
-.activo {
-    visibility: visible;
-    display: block;
 }
 
 li > a {
