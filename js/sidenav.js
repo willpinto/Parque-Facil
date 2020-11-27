@@ -22,6 +22,18 @@ jQuery(function ($) {
         }
     });
 
+    function ocultarElementos() {
+        $('.pages').addClass('ocultar');
+        $('.ingresar').removeClass('ocultar');
+        $('#modificar-eliminar').addClass('ocultar');
+    }
+
+    function habilitarModificarEliminar() {
+        $('.consultas').addClass('ocultar');
+        $('.ingresar').addClass('ocultar');
+        $('#modificar-eliminar').removeClass('ocultar');
+    }
+
     $("#close-sidebar").click(function () {
         $(".page-wrapper").removeClass("toggled");
     });
@@ -30,19 +42,36 @@ jQuery(function ($) {
     });
 
     $('#activar-administrador').click(function() {
-        $('.pages').removeClass('activo');
-        $('#administrador').addClass('activo');
+        ocultarElementos();
+        $('#administrador').removeClass('ocultar');
     });
     $('#activar-vigilante').click(function() {
-        $('.pages').removeClass('activo');
-        $('#vigilante').addClass('activo');
+        ocultarElementos();
+        $('#vigilante').removeClass('ocultar');
     });  
     $('#activar-consultar').click(function() {
-        $('.pages').removeClass('activo');
-        $('#consultar').addClass('activo');
+        ocultarElementos();
+        $('#consultar').removeClass('ocultar');
     });  
     $('#activar-reportes').click(function() {
-        $('.pages').removeClass('activo');
-        $('#reportes').addClass('activo');
-    });  
+        ocultarElementos();
+        $('#reportes').removeClass('ocultar');
+    });
+
+    $('#btnConsultar').click(function() {
+        switch ($('#tipo').val()) {
+            case "administrador":
+                habilitarModificarEliminar();
+                $('#administrador').removeClass('ocultar');
+                break;
+            case "vigilante":
+                habilitarModificarEliminar();
+                $('#vigilante').removeClass('ocultar');
+                break;
+            default:
+                habilitarModificarEliminar();
+                $('#propietario').removeClass('ocultar');
+                break;
+        }
+    });
 });
