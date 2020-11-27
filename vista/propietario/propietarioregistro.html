@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="../../icons/css/fontello.css">
     <link rel="stylesheet" href="../../css/estilosgeneral.css">
 </head>
+
 <body>
     <div class="container">
         <div class="row">
@@ -16,74 +18,64 @@
                 <h1 class="text-right display-3 font-weight-bold text-primary">Bienvenido</h1>
             </div>
         </div>
-        <div class="row mb-5">
+        <div class="row">
             <div class="col"></div>
             <div class="col-3">
                 <h3 class="text-center text-white bg-primary">Parquea Fácil</h3>
             </div>
         </div>
-        <div class="row pt-5 mt-5">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-4">
+                <h3 class="text-right text-primary">Registro de datos del propietario del vehículo</h3>
+            </div>
+        </div>
+        <div class="row pt-4 mb-5 pb-5">
             <div class="col">
-                <div class="row">
+                <div class="row mb-3">
                     <div class="col-6">
-                        <p class="text-justify">Por favor, complete la información con respecto a los datos de su cédulo y posteriormente los de su tarjeta de propiedad</p>
+                        <p class="text-justify">Por favor, complete la información con respecto a los datos de su cédulo
+                            y posteriormente los de su tarjeta de propiedad</p>
                     </div>
                     <div class="col"></div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <div class="form-group row">
-                            <label class="col-4 col-form-label">Tipo documento</label>
-                            <div class="col">
-                                <select class="form-control" id="tipo-documento">
-                                    <option value="ti">Tarjeta de identidad</option>
-                                    <option value="cc">Cédula de ciudadanía</option>
-                                    <option value="ce">Cédula de extrangería</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-4 col-form-label">Documento</label>
-                            <div class="col">
-                                <input type="number" class="form-control" id="documento">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-4 col-form-label">Apellidos</label>
-                            <div class="col">
-                                <input type="text" class="form-control" id="apellidos">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-4 col-form-label">Correo</label>
-                            <div class="col">
-                                <input type="email" class="form-control" id="correo">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-4 col-form-label">Clase licencia</label>
-                            <div class="col">
-                                <select class="form-control" id="clase-licencia">
-                                    <option value="A1">A1</option>
-                                    <option value="A2">A2</option>
-                                    <option value="B1">B1</option>
-                                    <option value="B2">B2</option>
-                                    <option value="C1">C1</option>
-                                    <option value="C2">C2</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-4 col-form-label">Dirección</label>
-                            <div class="col">
-                                <input type="text" class="form-control" id="direccion">
-                            </div>
+                        <div class="form-group">
+                            <label>Tipo documento</label>
+                            <select class="form-control" id="tipo-documento">
+                                <option value="ti">Tarjeta de identidad</option>
+                                <option value="cc">Cédula de ciudadanía</option>
+                                <option value="ce">Cédula de extrangería</option>
+                            </select>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="form-group row">
-                            <label class="col-4 col-form-label">Género</label>
-                            <div class="col">
+                        <div class="form-group">
+                            <label>Documento</label>
+                            <input type="number" class="form-control" id="documento">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Nombres</label>
+                            <input type="text" class="form-control" id="nombres">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Apellidos</label>
+                            <input type="text" class="form-control" id="apellidos">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Género</label>
+                            <div class="row d-flex justify-content-center">
                                 <div class="form-check form-check-inline">
                                     <input type="radio" name="genero" id="male" class="form-check-input" value="Hombre">
                                     <label for="male" class="form-check-label">Hombre</label>
@@ -94,41 +86,66 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label class="col-4 col-form-label">Nombres</label>
-                            <div class="col">
-                                <input type="text" class="form-control" id="nombres">
-                            </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Dirección</label>
+                            <input type="text" class="form-control" id="direccion">
                         </div>
-                        <div class="form-group row">
-                            <label class="col-4 col-form-label">Teléfono</label>
-                            <div class="col">
-                                <input type="number" class="form-control" id="telefono">
-                            </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Teléfono</label>
+                            <input type="number" class="form-control" id="telefono">
                         </div>
-                        <div class="form-group row">
-                            <label class="col-4 col-form-label">Fecha de nacimiento:</label>
-                            <div class="col">
-                                <input type="date" class="form-control" id="fecha-nacimiento">
-                            </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Correo</label>
+                            <input type="email" class="form-control" id="correo">
                         </div>
-                        <div class="form-group row">
-                            <label class="col-4 col-form-label">Número licencia</label>
-                            <div class="col">
-                                <input type="email" class="form-control" id="numero-licencia">
-                            </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Fecha de nacimiento:</label>
+                            <input type="date" class="form-control" id="fecha-nacimiento">
                         </div>
-                        <div class="form-group row">
-                            <label class="col-4 col-form-label">Correo</label>
-                            <div class="col">
-                                <select class="form-control" id="cargo">
-                                    <option value="Aprendiz">Aprendiz</option>
-                                    <option value="Instructor">Instructor</option>
-                                    <option value="Funcionario">Funcionario</option>
-                                    <option value="Administrativo">Administrativo</option>
-                                    <option value="Visitante">Visitante</option>
-                                </select>
-                            </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Clase licencia de conducción</label>
+                            <select class="form-control" id="clase-licencia">
+                                <option value="A1">A1</option>
+                                <option value="A2">A2</option>
+                                <option value="B1">B1</option>
+                                <option value="B2">B2</option>
+                                <option value="C1">C1</option>
+                                <option value="C2">C2</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Cargo:</label>
+                            <select class="form-control" id="cargo">
+                                <option value="Aprendiz">Aprendiz</option>
+                                <option value="Instructor">Instructor</option>
+                                <option value="Funcionario">Funcionario</option>
+                                <option value="Administrativo">Administrativo</option>
+                                <option value="Visitante">Visitante</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Número licencia de conducción</label>
+                            <input type="email" class="form-control" id="numero-licencia">
                         </div>
                     </div>
                 </div>
@@ -147,8 +164,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="tc-modal" data-backdrop="static" data-keyboard="false" tabindex="-1"
-        role="dialog">
+    <div class="modal fade" id="tc-modal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -167,8 +183,10 @@
                             </div>
                             <div class="d-flex flex-row-reverse">
                                 <div class="form-check">
-                                    <input type="checkbox" name="aceptar" id="aceptar-tc" class="form-check-input" value="Hombre">
-                                    <label for="aceptar-tc" class="form-check-label">Aceptar terminos y condiciones</label>
+                                    <input type="checkbox" name="aceptar" id="aceptar-tc" class="form-check-input"
+                                        value="Hombre">
+                                    <label for="aceptar-tc" class="form-check-label">Aceptar terminos y
+                                        condiciones</label>
                                 </div>
                             </div>
                         </div>
@@ -178,7 +196,7 @@
                     <div class="row">
                         <div class="col">
                             <button class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                            <a href="misvehiculos.html" id="ConfirmarIngresar" class="btn btn-success">Registrar</a>
+                            <a href="misvehiculos.html" id="ConfirmarRegistroProp" class="btn btn-success disabled">Registrar</a>
                         </div>
                     </div>
                 </div>
@@ -190,4 +208,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
     <script src="../../js/scriptgeneral.js"></script>
 </body>
+
 </html>

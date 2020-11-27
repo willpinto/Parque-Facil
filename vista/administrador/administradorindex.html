@@ -113,7 +113,44 @@
         <main class="page-content">
             <div class="container-fluid">
                 <div class="container px-5">
-                    <div class="pages" id="administrador">
+                    <!--Sección consultar-->
+                    <div class="pages ocultar" id="consultar">
+                        <div class="row">
+                            <div class="col">
+                                <h1 class="text-center">Consultar Usuario</h1>
+                            </div>
+                        </div>
+                        <div class="row pt-5">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group my-3">
+                                            <label>Tipo:</label>
+                                            <select class="form-control" id="tipo">
+                                                <option value="administrador">Administrador</option>
+                                                <option value="vigilante">Vigilante</option>
+                                                <option value="Propietario">Propietario</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group my-3">
+                                            <label>Cédula:</label>
+                                            <input class="form-control" id="cedula-usu" type="number" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col"></div>
+                            <div class="col-3 d-flex flex-column">
+                                <button id="btnConsultar" class="btn btn-primary">Buscar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Sección administrador-->
+                    <div class="consultas pages ocultar" id="administrador">
                         <div class="row">
                             <div class="col">
                                 <h1 class="text-center">Administrador</h1>
@@ -149,16 +186,26 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-6"></div>
+                                    <div class="col">
+                                        <div class="form-group my-3">
+                                            <label>Repita contraseña:</label>
+                                            <input class="form-control" id="pass-rep-adm" type="text" required>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="row mt-3">
+                        <div class="row mt-3 ingresar">
                             <div class="col"></div>
                             <div class="col-3 d-flex flex-column">
                                 <button id="btnAdministrador" class="btn btn-primary">Ingresar</button>
                             </div>
                         </div>
                     </div>
-                    <div class="pages" id="vigilante">
+                    <!--Sección vigilante-->
+                    <div class="consultas pages ocultar" id="vigilante">
                         <div class="row">
                             <div class="col">
                                 <h1 class="text-center">Vigilante</h1>
@@ -195,60 +242,164 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-3"></div>
+                                    <div class="col">
+                                        <label>Nombre empresa de vigilancia</label>
+                                        <input class="form-control" id="nombre-empresa" type="text" required>
+                                    </div>
                                     <div class="col">
                                         <div class="form-group my-3">
                                             <label>Contraseña:</label>
                                             <input class="form-control" id="pass-vig" type="text" required>
                                         </div>
                                     </div>
-                                    <div class="col-3"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6"></div>
+                                    <div class="col">
+                                        <div class="form-group my-3">
+                                            <label>Repita contraseña:</label>
+                                            <input class="form-control" id="pass-rep-vig" type="text" required>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row mt-3">
+                        <div class="row mt-3 ingresar">
                             <div class="col"></div>
                             <div class="col-3 d-flex flex-column">
                                 <button id="btnVigilante" class="btn btn-primary">Ingresar</button>
                             </div>
                         </div>
                     </div>
-                    <div class="pages" id="consultar">
+                    <!--Sección propietario-->
+                    <div class="consultas pages ocultar" id="propietario">
                         <div class="row">
                             <div class="col">
-                                <h1 class="text-center">Consultar Usuario</h1>
+                                <h1 class="text-center">Propietario</h1>
                             </div>
                         </div>
                         <div class="row pt-5">
                             <div class="col">
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="form-group my-3">
-                                            <label>Tipo:</label>
-                                            <select class="form-control" id="tipo">
-                                                <option value="administrador">Administrador</option>
-                                                <option value="vigilante">Vigilante</option>
-                                                <option value="Propietario">Propietario</option>
-                                            </select>
+                                <div class="form-group">
+                                    <label>Tipo documento</label>
+                                    <select class="form-control" id="tipo-documento">
+                                        <option value="ti">Tarjeta de identidad</option>
+                                        <option value="cc">Cédula de ciudadanía</option>
+                                        <option value="ce">Cédula de extrangería</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Documento</label>
+                                    <input type="number" class="form-control" id="documento">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Nombres</label>
+                                    <input type="text" class="form-control" id="nombres">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Apellidos</label>
+                                    <input type="text" class="form-control" id="apellidos">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Género</label>
+                                    <div class="row d-flex justify-content-center">
+                                        <div class="form-check form-check-inline">
+                                            <input type="radio" name="genero" id="male" class="form-check-input" value="Hombre">
+                                            <label for="male" class="form-check-label">Hombre</label>
                                         </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="form-group my-3">
-                                            <label>Cédula:</label>
-                                            <input class="form-control" id="cedula-usu" type="number" required>
+                                        <div class="form-check form-check-inline">
+                                            <input type="radio" name="genero" id="female" class="form-check-input" value="Mujer">
+                                            <label for="female" class="form-check-label">Mujer</label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Dirección</label>
+                                    <input type="text" class="form-control" id="direccion">
+                                </div>
+                            </div>
                         </div>
-                        <div class="row mt-3">
-                            <div class="col"></div>
-                            <div class="col-3 d-flex flex-column">
-                                <button id="btnConsultar" class="btn btn-primary">Buscar</button>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Teléfono</label>
+                                    <input type="number" class="form-control" id="telefono">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Correo</label>
+                                    <input type="email" class="form-control" id="correo">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Fecha de nacimiento:</label>
+                                    <input type="date" class="form-control" id="fecha-nacimiento">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Clase licencia de conducción</label>
+                                    <select class="form-control" id="clase-licencia">
+                                        <option value="A1">A1</option>
+                                        <option value="A2">A2</option>
+                                        <option value="B1">B1</option>
+                                        <option value="B2">B2</option>
+                                        <option value="C1">C1</option>
+                                        <option value="C2">C2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Cargo:</label>
+                                    <select class="form-control" id="tipo_pro">
+                                        <option value="Aprendiz">Aprendiz</option>
+                                        <option value="Instructor">Instructor</option>
+                                        <option value="Funcionario">Funcionario</option>
+                                        <option value="Administrativo">Administrativo</option>
+                                        <option value="Visitante">Visitante</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Número licencia de conducción</label>
+                                    <input type="email" class="form-control" id="numero-licencia">
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="pages" id="reportes">
+                    <!--Sección botones modificar/eliminar-->
+                    <div class="mb-5 pb-5 ocultar" id="modificar-eliminar">
+                        <div class="row mt-3">
+                            <div class="col d-flex flex-row-reverse">
+                                <button id="btnActualizar" class="btn btn-primary mx-1">Actualizar</button>
+                                <button id="btnEliminar" class="btn btn-primary mx-1">Eliminar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Sección reportes-->
+                    <div class="pages ocultar" id="reportes">
                         <div class="row">
                             <div class="col">
                                 <h1>Reportes</h1>
@@ -261,8 +412,34 @@
                                         <div class="form-group my-3">
                                             <label>Tipo:</label>
                                             <select class="form-control" id="parametro">
-                                                <option value="administrador">Número de vehículos por tipo</option>
+                                                <option value="num-veh-tipo">Número de vehículos por tipo</option>
+                                                <option value="veh-ing-fec">Vehículos ingresados entre fechas</option>
+                                                <option value="veh-egr-fec">Vehiculos egrasados entre fechas</option>
                                             </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label>Tipo de vehículo</label>
+                                            <select class="form-control" id="tipo-veh">
+                                                <option value="carro">Carro</option>
+                                                <option value="moto">Moto</option>
+                                                <option value="bici">Bicicleta</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label>Fecha inicio</label>
+                                            <input type="date" class="form-control" id="fecha-inicio">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label>Fecha final</label>
+                                            <input type="date" class="form-control" id="fecha-final">
                                         </div>
                                     </div>
                                 </div>
